@@ -22,6 +22,11 @@ const getData = async () => {
   }
 };
 
+<audio
+  id="firstBloodAudio"
+  src="https://www.youtube.com/watch?v=AuNHcxR7FFU"
+></audio>;
+
 
 export default async function Home() {
   const data = await getData();

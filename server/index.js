@@ -2,21 +2,27 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const port = 5000; 
+const port = 5000;
 
 app.use(cors());
+app.use(express.json()); 
 
-const jsonData = {
-  message: "Hello from the server!",
-  data: [
-    { id: 1, name: "Item 1" },
-    { id: 2, name: "Item 2" },
-  ],
-};
+let jsonData = {};
+
+app.post("/api/data", (req, res) => {
+  if (req.body) {
+    jsonData = req.body;
+    res.status(200).send("Data received");
+  } else {
+    res.status(400).send("Bad Request: No data provided");
+  }
+});
+
 
 app.get("/api/data", (req, res) => {
   res.json(jsonData);
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
