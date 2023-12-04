@@ -43,14 +43,14 @@ app.get("/api/blood", (req, res) => {
   res.json(bloodData);
 });
 
-app.post("/api/solve", (req, res) => {
+app.post("/api/solves", (req, res) => {
   validateRequest(req, res);
-  console.log(`[/api/solve]       Got data: ${JSON.stringify(req.body)}`);
+  console.log(`[/api/solves]      Got data: ${JSON.stringify(req.body)}`);
   solveData = req.body;
   res.status(200).send({ status: "ok" });
 });
 
-app.get("/api/solve", (req, res) => {
+app.get("/api/solves", (req, res) => {
   res.json(solveData);
 });
 
