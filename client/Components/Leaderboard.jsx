@@ -7,7 +7,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await fetch(`${process.env.BACKEND_URL}/api/solves`);
+        const res = await fetch(`${process.env.BACKEND_URL}/api/leaderboard`);
 
         if (!res.ok) {
           throw new Error(`Error: ${res.status} - ${res.statusText}`);
