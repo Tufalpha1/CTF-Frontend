@@ -7,6 +7,8 @@ const Leaderboard = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        // process.env.BACKEND_URL = "http://192.168.163.195:5000";
+        console.log(`URL is ${process.env.BACKEND_URL}`);
         const res = await fetch(`${process.env.BACKEND_URL}/api/leaderboard`);
 
         if (!res.ok) {
@@ -14,7 +16,9 @@ const Leaderboard = () => {
         }
 
         const apiData = await res.json();
-        setData(apiData);
+        console.log("GOT Leaderboard data");
+        console.log(apiData);
+        setData(apiData.data);
       } catch (err) {
         console.error(err);
       }
@@ -23,8 +27,18 @@ const Leaderboard = () => {
     getData();
   }, []);
 
-    const top3Teams = data.slice(0, 3);
-    const remainingTeams = data.slice(3);
+    if(data.length === 0 || data === undefined) {
+      return (
+        <section className="pr-32 relative overflow-x-auto">
+          <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+            Leaderboard
+          </h1>
+          <h1 className="text-center text-4xl font-bold">Loading...</h1>
+        </section>
+      )
+    }
+    const top3Teams = Object.entries(data).slice(0, 3);
+    const remainingTeams = Object.entries(data).slice(3);
 
   return (
     <section className="pr-32 relative overflow-x-auto">
@@ -47,7 +61,7 @@ const Leaderboard = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold pb-2 ">{index + 1}</h2>
               <h4 className="inline text-2xl font-medium tracking-wider">
-                {team.team_name} - {team.points}
+                {team.name} - {team.points}
               </h4>
             </div>
           </div>
@@ -59,7 +73,7 @@ const Leaderboard = () => {
           {remainingTeams.map((team, index) => (
             <tr key={index} className="border-b">
               <td className="px-24 py-4">{team.position}</td>
-              <td className="px-6 py-4">{team.team_name}</td>
+              <td className="px-6 py-4">{team.name}</td>
               <td className="px-3 py-4">{team.points}</td>
             </tr>
           ))}

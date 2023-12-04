@@ -12,6 +12,8 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        process.env.BACKEND_URL = "http://192.168.163.195:5000";
+        console.log(`URL is ${process.env.BACKEND_URL}`);
         const res = await fetch(`${process.env.BACKEND_URL}/api/blood`);
 
         if (!res.ok) {
