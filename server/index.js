@@ -41,6 +41,7 @@ app.post("/api/blood", (req, res) => {
 
 app.get("/api/blood", (req, res) => {
   res.json(bloodData);
+  bloodData = {};
 });
 
 app.post("/api/solves", (req, res) => {
