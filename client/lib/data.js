@@ -5,7 +5,7 @@ const Solves_and_firstBlood =
 "team_name" : "CYB3RBULL1ES",
 "solved_by": "tufalpha1",
 "category" : "osint",
-"firstBlood" : false
+"firstBlood" : true
 }]
 
 const leaderboard = [

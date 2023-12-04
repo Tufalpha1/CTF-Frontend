@@ -1,11 +1,30 @@
-import { leaderboard } from '@/lib/data';
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
 
 const Leaderboard = () => {
+  const [data, setData] = useState([]);
 
-    const top3Teams = leaderboard.slice(0, 3);
-    const remainingTeams = leaderboard.slice(3);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await fetch(`${process.env.BACKEND_URL}/api/solves`);
+
+        if (!res.ok) {
+          throw new Error(`Error: ${res.status} - ${res.statusText}`);
+        }
+
+        const apiData = await res.json();
+        setData(apiData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    getData();
+  }, []);
+
+    const top3Teams = data.slice(0, 3);
+    const remainingTeams = data.slice(3);
 
   return (
     <section className="pr-32 relative overflow-x-auto">
