@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { Solves_and_firstBlood } from "@/lib/data";
 
 const Latest = () => {
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        // process.env.BACKEND_URL = "http://192.168.163.195:5000";
-        console.log(`URL is ${process.env.BACKEND_URL}`);
-        const res = await fetch(`${process.env.BACKEND_URL}/api/solves`);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       console.log(`URL is ${process.env.BACKEND_URL}`);
+  //       const res = await fetch(`${process.env.BACKEND_URL}/api/solves`);
 
-        if (!res.ok) {
-          throw new Error(`Error: ${res.status} - ${res.statusText}`);
-        }
+  //       if (!res.ok) {
+  //         throw new Error(`Error: ${res.status} - ${res.statusText}`);
+  //       }
 
-        const apiData = await res.json();
-        setData(apiData);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  //       const apiData = await res.json();
+  //       setData(apiData);
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <section className=" relative overflow-x-auto">
@@ -38,11 +38,13 @@ const Latest = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b">
-            <td className="px-6 py-4">{data.points}</td>
-            <td className="px-6 py-4">{data.chal_name}</td>
-            <td className="px-6 py-4">{data.team_name}</td>
-          </tr>
+          {Solves_and_firstBlood.map((team, index) => (
+            <tr key={index} className="border-b">
+              <td className="px-6 py-4">{team.points}</td>
+              <td className="px-6 py-4">{team.chal_name}</td>
+              <td className="px-6 py-4">{team.team_name}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </section>
