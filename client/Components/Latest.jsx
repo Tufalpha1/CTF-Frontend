@@ -4,7 +4,7 @@ import  keys  from "@/lib/variables";
 
 
 const Latest = () => {
-  const [data, setData] = useState({});
+  const [singleCapture, setSingleCapture] = useState({});
   const [latestCaptures, setLatestCaptures] = useState([]);
   const { BACKEND_URL } = keys;
 
@@ -19,15 +19,23 @@ const Latest = () => {
         }
 
         const apiData = await res.json();
-        console.log("Latest Data",apiData)
-        setData(apiData);
+        console.log("Received Data",apiData)
+        setSingleCapture(apiData);
       } catch (err) {
         console.error(err);
       }
     };
-
     getData();
   }, []);
+
+
+  useEffect(() => {
+    if (singleCapture.length === 0 || singleCapture === undefined) {
+      return;
+    }
+    //push the latest capture to the array
+    setLatestCaptures((prev) => [...prev, singleCapture]);
+  }, [singleCapture]);
 
 /*
 IN case of empty: {}
