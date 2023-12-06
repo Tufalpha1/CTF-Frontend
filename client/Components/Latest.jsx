@@ -1,28 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { Solves_and_firstBlood } from "@/lib/data";
+import  keys  from "@/lib/variables";
+
 
 const Latest = () => {
-  // const [data, setData] = useState({});
+  const [data, setData] = useState({});
+  const [latestCaptures, setLatestCaptures] = useState([]);
+  const { BACKEND_URL } = keys;
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       console.log(`URL is ${process.env.BACKEND_URL}`);
-  //       const res = await fetch(`${process.env.BACKEND_URL}/api/solves`);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        console.log(`URL is ${BACKEND_URL}`);
+        const res = await fetch(`${BACKEND_URL}/api/solves`);
 
-  //       if (!res.ok) {
-  //         throw new Error(`Error: ${res.status} - ${res.statusText}`);
-  //       }
+        if (!res.ok) {
+          throw new Error(`Error: ${res.status} - ${res.statusText}`);
+        }
 
-  //       const apiData = await res.json();
-  //       setData(apiData);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
+        const apiData = await res.json();
+        console.log("Latest Data",apiData)
+        setData(apiData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
-  //   getData();
-  // }, []);
+    getData();
+  }, []);
+
+/*
+IN case of empty: {}
+In case of data: [{"name"}, {"name"}...]
+In case of data: [{"name"}, {"name"}...]
+*/
 
   return (
     <section className=" relative overflow-x-auto">

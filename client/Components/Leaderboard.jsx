@@ -1,44 +1,45 @@
 import React, { useState, useEffect } from "react";
-import { leaderboard } from "@/lib/data";
+// import { leaderboard } from "@/lib/data";
+import  keys  from "@/lib/variables";
+
 
 
 const Leaderboard = () => {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [top3Teams, setTop3Teams] = useState([]);
+  const [remainingTeams, setRemainingTeams] = useState([]);
+  const { BACKEND_URL } = keys;
+  const getData = async () => {
+    try {
+      console.log(`URL is ${BACKEND_URL}`);
+      const res = await fetch(`${BACKEND_URL}/api/leaderboard`);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       console.log(`URL is ${process.env.BACKEND_URL}`);
-  //       const res = await fetch(`${process.env.BACKEND_URL}/api/leaderboard`);
+      if (!res.ok) {
+        throw new Error(`Error: ${res.status} - ${res.statusText}`);
+      }
+      const apiData = await res.json();
+      setData(apiData.data);
+      setTop3Teams(apiData.data.slice(0, 3));
+      setRemainingTeams(apiData.data.slice(3));
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-  //       if (!res.ok) {
-  //         throw new Error(`Error: ${res.status} - ${res.statusText}`);
-  //       }
+  useEffect(() => {
+    getData();
+  }, []);
 
-  //       const apiData = await res.json();
-  //       console.log("GOT Leaderboard data");
-  //       console.log(apiData);
-  //       setData(apiData.data);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-
-  //   getData();
-  // }, []);
-
-    // if(data.length === 0 || data === undefined) {
-    //   return (
-    //     <section className="pr-32 relative overflow-x-auto">
-    //       <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
-    //         Leaderboard
-    //       </h1>
-    //       <h1 className="text-center text-4xl font-bold">Loading...</h1>
-    //     </section>
-    //   )
-    // }
-    const top3Teams = leaderboard.slice(0, 3);
-    const remainingTeams = leaderboard.slice(3);
+    if(data.length === 0 || data === undefined) {
+      return (
+        <section className="pr-32 relative overflow-x-auto">
+          <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+            Leaderboard
+          </h1>
+          <h1 className="text-center text-4xl font-bold">Loading...</h1>
+        </section>
+      )
+    }
 
   return (
     <section className="pr-32 relative overflow-x-auto">
@@ -61,7 +62,7 @@ const Leaderboard = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold pb-2 ">{index + 1}</h2>
               <h4 className="inline text-2xl font-medium tracking-wider">
-                {team.team_name} - {team.points}
+                {team.name} - {team.points}
               </h4>
             </div>
           </div>
@@ -73,7 +74,7 @@ const Leaderboard = () => {
           {remainingTeams.map((team, index) => (
             <tr key={index} className="border-b">
               <td className="px-24 py-4">{team.position}</td>
-              <td className="px-6 py-4">{team.team_name}</td>
+              <td className="px-6 py-4">{team.name}</td>
               <td className="px-3 py-4">{team.points}</td>
             </tr>
           ))}
