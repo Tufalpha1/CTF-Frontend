@@ -4,7 +4,7 @@ import  keys  from "@/lib/variables";
 
 
 
-const Leaderboard = () => {
+const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
   const [data, setData] = useState([]);
   const [top3Teams, setTop3Teams] = useState([]);
   const [remainingTeams, setRemainingTeams] = useState([]);
@@ -18,7 +18,10 @@ const Leaderboard = () => {
         throw new Error(`Error: ${res.status} - ${res.statusText}`);
       }
       const apiData = await res.json();
+      console.log("Received Data",apiData)
       setData(apiData.data);
+      setNewLeader(apiData.leader);
+      setShowNewLeader(apiData.new_leader);
       setTop3Teams(apiData.data.slice(0, 3));
       setRemainingTeams(apiData.data.slice(3));
     } catch (err) {
@@ -26,11 +29,13 @@ const Leaderboard = () => {
     }
   };
 
+  console.log("top3Teams",top3Teams)
+  console.log("RemainingTeam",remainingTeams)
   useEffect(() => {
     getData();
   }, []);
 
-    if(data.length === 0 || data === undefined) {
+    if( data === undefined || data.length === 0 ) {
       return (
         <section className="pr-32 relative overflow-x-auto">
           <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">

@@ -4,39 +4,30 @@ import  keys  from "@/lib/variables";
 
 
 const Latest = () => {
-  const [singleCapture, setSingleCapture] = useState({});
   const [latestCaptures, setLatestCaptures] = useState([]);
   const { BACKEND_URL } = keys;
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        console.log(`URL is ${BACKEND_URL}`);
-        const res = await fetch(`${BACKEND_URL}/api/solves`);
-
-        if (!res.ok) {
-          throw new Error(`Error: ${res.status} - ${res.statusText}`);
-        }
-
-        const apiData = await res.json();
-        console.log("Received Data",apiData)
-        setSingleCapture(apiData);
-      } catch (err) {
-        console.error(err);
+  const getData = async () => {
+    try {
+      console.log(`URL is ${BACKEND_URL}`);
+      const res = await fetch(`${BACKEND_URL}/api/solves`);
+      if (!res.ok) {
+        throw new Error(`Error: ${res.status} - ${res.statusText}`);
       }
-    };
-    getData();
+
+      const apiData = await res.json();
+      console.log("Received Data",apiData)
+      setLatestCaptures([apiData]);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+        getData();
   }, []);
 
-
-  useEffect(() => {
-    if (singleCapture.length === 0 || singleCapture === undefined) {
-      return;
-    }
-    //push the latest capture to the array
-    setLatestCaptures((prev) => [...prev, singleCapture]);
-  }, [singleCapture]);
-
+  console.log("Captures",latestCaptures)
 /*
 IN case of empty: {}
 In case of data: [{"name"}, {"name"}...]
@@ -57,7 +48,7 @@ In case of data: [{"name"}, {"name"}...]
           </tr>
         </thead>
         <tbody>
-          {Solves_and_firstBlood.map((team, index) => (
+          {latestCaptures?.map((team, index) => (
             <tr key={index} className="border-b">
               <td className="px-6 py-4">{team.points}</td>
               <td className="px-6 py-4">{team.chal_name}</td>
