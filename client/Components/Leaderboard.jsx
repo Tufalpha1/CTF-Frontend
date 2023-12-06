@@ -41,9 +41,11 @@ const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
           <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
             Leaderboard
           </h1>
-          <h1 className="text-center text-4xl font-bold">Loading...</h1>
+          <p className="text-center my-4 font-medium text-xl text-gray-400">
+            Loading...
+          </p>
         </section>
-      )
+      );
     }
 
   return (
@@ -67,7 +69,7 @@ const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
             <div className="text-center">
               <h2 className="text-4xl font-bold pb-2 ">{index + 1}</h2>
               <h4 className="inline text-2xl font-medium tracking-wider">
-                {team.name} - {team.points}
+                {team?.name} - {team?.points}
               </h4>
             </div>
           </div>
@@ -78,9 +80,9 @@ const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
         <tbody>
           {remainingTeams.map((team, index) => (
             <tr key={index} className="border-b">
-              <td className="px-24 py-4">{team.position}</td>
-              <td className="px-6 py-4">{team.name}</td>
-              <td className="px-3 py-4">{team.points}</td>
+              <td className="px-24 py-4">{team?.position}</td>
+              <td className="px-6 py-4">{team?.name}</td>
+              <td className="px-3 py-4">{team?.points}</td>
             </tr>
           ))}
         </tbody>

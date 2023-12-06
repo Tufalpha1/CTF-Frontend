@@ -13,6 +13,69 @@ let bloodData = {};
 let solveData = {};
 let leaderboardData = {};
 
+let fakeBloodData = {
+  chal_name: "test",
+  points: 100,
+  team_name: "test-team",
+  solved_by: "ashfaq",
+  first_blood: true,
+};
+
+let fakeSolveData = [
+  {
+    chal_name: "test",
+    points: 100,
+    team_name: "test-team",
+    solved_by: "ashfaq",
+    first_blood: false,
+  },
+  {
+    chal_name: "test",
+    points: 150,
+    team_name: "test-team_1",
+    solved_by: "ashfaq",
+    first_blood: false,
+  },
+];
+
+let fakeLeaderboardData = {
+  data: [
+    {
+      position: 1,
+      name: "Ali",
+      points: 1520,
+    },
+    {
+      position: 2,
+      name: "Ali T",
+      points: 1280,
+    },
+    {
+      position: 3,
+      name: "Zain Z",
+      points: 1200,
+    },
+    {
+      position: 4,
+      name: "T Ali",
+      points: 1150,
+    },
+    {
+      position: 5,
+      name: "Zain Ali",
+      points: 1080,
+    },
+  ],
+  leader: {
+    name: "Ali",
+    points: 1520,
+  },
+  new_leader: true,
+};
+
+
+
+
 function validateRequest(req, res) {
   // A simple validation function to check if the request body is valid
   if(req.body === undefined || req.body === null || Object.keys(req.body).length === 0) {
@@ -41,7 +104,7 @@ app.post("/api/blood", (req, res) => {
 
 app.get("/api/blood", (req, res) => {
   res.json(bloodData);
-  bloodData = {};
+   bloodData = {};
 });
 
 app.post("/api/solves", (req, res) => {

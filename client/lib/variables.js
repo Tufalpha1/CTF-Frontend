@@ -1,5 +1,5 @@
 const keys = {
-    BACKEND_URL: "http://192.168.18.20:81"
+    BACKEND_URL: "http://127.0.0.1:5000"
 };
 
 export default keys;
