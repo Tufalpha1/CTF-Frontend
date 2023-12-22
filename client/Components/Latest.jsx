@@ -1,41 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { Solves_and_firstBlood } from "@/lib/data";
+import { latestSolves } from "@/lib/data";
 import  keys  from "@/lib/variables";
 
 
 const Latest = () => {
-  const [latestCaptures, setLatestCaptures] = useState([]);
-  const { BACKEND_URL } = keys;
+  // const [latestCaptures, setLatestCaptures] = useState([]);
+  // const { BACKEND_URL } = keys;
 
-  const getData = async () => {
-    try {
-      console.log(`URL is ${BACKEND_URL}`);
-      const res = await fetch(`${BACKEND_URL}/api/solves`);
-      if (!res.ok) {
-        throw new Error(`Error: ${res.status} - ${res.statusText}`);
-      }
+  // const getData = async () => {
+  //   try {
+  //     console.log(`URL is ${BACKEND_URL}`);
+  //     const res = await fetch(`${BACKEND_URL}/api/solves`);
+  //     if (!res.ok) {
+  //       throw new Error(`Error: ${res.status} - ${res.statusText}`);
+  //     }
 
-      const apiData = await res.json();
-      console.log("Received Data",apiData)
-      setLatestCaptures(apiData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //     const apiData = await res.json();
+  //     console.log("Received Data",apiData)
+  //     setLatestCaptures(apiData);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
-  useEffect(() => {
-        getData();
-  }, []);
+  // useEffect(() => {
+  //       getData();
+  // }, []);
 
-  console.log("Captures",latestCaptures)
+  // console.log("Captures",latestCaptures)
+  
 
   return (
     <section className=" relative overflow-x-auto">
-      <h1 className="font-bold text-6xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+      <h1 className="font-bold text-4xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Latest Captures
       </h1>
-      {latestCaptures.length > 0 ? (
-        <table className="w-full text-2xl text-left rtl:text-right">
+      {latestSolves.length > 0 ? (
+        <table className="w-full text-xl text-left rtl:text-right">
           <thead className="text-gray-700 uppercase bg-gray-200">
             <tr>
               <th className="px-6 py-3">Points</th>
@@ -44,7 +45,7 @@ const Latest = () => {
             </tr>
           </thead>
           <tbody>
-            {latestCaptures.map((team, index) => (
+            {latestSolves.map((team, index) => (
               <tr key={index} className="border-b">
                 <td className="px-6 py-4">{team?.points}</td>
                 <td className="px-6 py-4">{team?.chal_name}</td>

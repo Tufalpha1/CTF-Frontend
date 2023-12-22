@@ -97,14 +97,14 @@ function validateRequest(req, res) {
 app.post("/api/blood", (req, res) => {
   validateRequest(req, res);
   console.log(`[/api/blood]       Got data: ${JSON.stringify(req.body)}`);
-  bloodData = req.body;
+  fakeBloodData = req.body;
   res.status(200).send({ status: "ok" });
 });
 
 
 app.get("/api/blood", (req, res) => {
-  res.json(bloodData);
-   bloodData = {};
+  res.json(fakeBloodData);
+   fakeBloodData = {};
 });
 
 app.post("/api/solves", (req, res) => {
