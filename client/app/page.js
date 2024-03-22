@@ -70,6 +70,12 @@ const Home = () => {
           <h1 className="uppercase glow-text-red text-8xl font-extrabold tracking-wider text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             First Blood!
           </h1>
+          <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
+            <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#AA0000] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
+            <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#AA0000] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ff0000] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ff0000] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+          </div>
           <h3 className="py-12 text-3xl font-extrabold text-center">
             CHALLENGE{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff0000] to-[#AA0000]">
@@ -92,6 +98,12 @@ const Home = () => {
           <h1 className="uppercase glow-text-blue text-8xl font-extrabold tracking-wider text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             New Leader!
           </h1>
+          <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
+            <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#3c8ce7] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
+            <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#3c8ce7] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#00eaff] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#00eaff] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+          </div>
           <h3 className="py-12 text-3xl text-center font-extrabold">
             TEAM{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-[#3c8ce7] from-[#00eaff]">
@@ -109,7 +121,7 @@ const Home = () => {
       return (
         <div>
           <h1 className="uppercase linear-wipe pb-4 mx-auto max-w-full text-8xl tracking-widest">
-            CAPCON CTF 2024
+            CTF Final Round
           </h1>
           <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
             <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
