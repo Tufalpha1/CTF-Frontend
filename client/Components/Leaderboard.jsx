@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { leaderboard } from "@/lib/data";
 import keys from "@/lib/variables";
 import { leaderboard } from "@/lib/data";
-import { BackgroundGradient } from "@/Components/BackgroundGradient";
+import BackgroundGradient from "@/Components/BackgroundGradient";
 
 const Leaderboard = ({ setNewLeader, setShowNewLeader }) => {
   // const [data, setData] = useState([]);
