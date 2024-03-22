@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 // import { leaderboard } from "@/lib/data";
-import  keys  from "@/lib/variables";
+import keys from "@/lib/variables";
 import { leaderboard } from "@/lib/data";
+import { BackgroundGradient } from "@/Components/BackgroundGradient";
 
-
-
-const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
+const Leaderboard = ({ setNewLeader, setShowNewLeader }) => {
   // const [data, setData] = useState([]);
   // const [top3Teams, setTop3Teams] = useState([]);
   // const [remainingTeams, setRemainingTeams] = useState([]);
@@ -39,47 +38,86 @@ const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
   const top3Teams = data.slice(0, 3);
   const remainingTeams = data.slice(3);
 
-    if( data === undefined || data.length === 0 ) {
-      return (
-        <section className="pr-32 relative overflow-x-auto">
-          <h1 className="font-bold text-4xl pr-6 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
-            Leaderboard
-          </h1>
-          <p className="text-center my-4 font-medium text-xl text-gray-400">
-            Loading...
-          </p>
-        </section>
-      );
-    }
+  if (data === undefined || data.length === 0) {
+    return (
+      <section className="pr-32 relative overflow-x-auto">
+        <h1 className="uppercase font-bold text-4xl pr-6 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+          Leaderboard
+        </h1>
+        <p className="text-center my-4 font-medium text-xl text-gray-400">
+          Loading...
+        </p>
+      </section>
+    );
+  }
 
   return (
-    <section className="pr-32 relative overflow-x-auto">
-      <h1 className="font-bold text-4xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+    <section className="font-extrabold pr-32 relative overflow-x-auto">
+      <h1 className="uppercase text-5xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Leaderboard
       </h1>
-
       <div className="p-5 m-3 flex flex-col lg:flex-row items-center gap-5 mt-5">
-        {top3Teams.map((team, index) => (
+        {/* {top3Teams.map((team, index) => (
           <div
             key={index}
-            className={`flex items-center flex-grow p-3 m-3 border-b hover:text-black hover:bg-gray-200 ${
+            className={`flex items-center flex-grow p-3 m-3 border-b bg-black hover:text-black hover:bg-gray-200 ${
               index === 0
-                ? "order-2 bg-gradient-to-br from-[#FFDD00] to-[#FBB034] hover:text-white border-none"
+                ? "order-2 bg-gradient-to-r from-[#ffdd00] to-[#ce8f2a] text-black border-none"
                 : index === 1
                 ? "order-1"
                 : "order-3"
             }`}
           >
-            <div className="text-center">
+            <BackgroundGradient className="text-center">
               <h2 className="text-4xl font-bold pb-2 ">{index + 1}</h2>
-              <h4 className="inline text-2xl font-medium tracking-wider">
+              <h4 className="inline text-2xl tracking-wider">
+                {team?.name} - {team?.points}
+              </h4>
+            </BackgroundGradient>
+          </div>
+        ))} */}
+        {top3Teams
+          .filter((team) => team.position == 2)
+          .map((team, index) => (
+            <div
+              key={index}
+              className="flex flex-col text-center items-center flex-grow p-3 m-3 border-b bg-black hover:text-black hover:bg-gray-200"
+            >
+              <h2 className="text-4xl font-bold pb-2 ">{team?.position}</h2>
+              <h4 className="inline text-2xl tracking-wider">
                 {team?.name} - {team?.points}
               </h4>
             </div>
-          </div>
-        ))}
+          ))}
+        <BackgroundGradient className="max-w-sm p-4 sm:p-10 bg-black">
+          {top3Teams
+            .filter((team) => team.position == 1)
+            .map((team, index) => (
+              <div
+                key={index}
+                className="flex flex-col text-center items-center flex-grow p-3 m-3  bg-black "
+              >
+                <h2 className="text-4xl font-bold pb-2 ">{team?.position}</h2>
+                <h4 className="inline text-2xl tracking-wider">
+                  {team?.name} - {team?.points}
+                </h4>
+              </div>
+            ))}
+        </BackgroundGradient>
+        {top3Teams
+          .filter((team) => team.position == 3)
+          .map((team, index) => (
+            <div
+              key={index}
+              className="flex flex-col text-center items-center flex-grow p-3 m-3 border-b bg-black hover:text-black hover:bg-gray-200"
+            >
+              <h2 className="text-4xl font-bold pb-2 ">{team?.position}</h2>
+              <h4 className="inline text-2xl tracking-wider">
+                {team?.name} - {team?.points}
+              </h4>
+            </div>
+          ))}
       </div>
-
       <table className="w-full  text-left rtl:text-right">
         <tbody>
           {remainingTeams.map((team, index) => (
@@ -93,6 +131,6 @@ const Leaderboard = ({setNewLeader , setShowNewLeader}) => {
       </table>
     </section>
   );
-}
+};
 
-export default Leaderboard
+export default Leaderboard;

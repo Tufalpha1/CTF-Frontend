@@ -26,7 +26,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
 .glow-text-red {
   position: relative;
   width: 100%;
@@ -67,8 +66,8 @@ body {
   92.1%,
   100% {
     color: #fff;
-    text-shadow: 0 0 10px #FF033E, 0 0 20px #AA0000, 0 0 40px #FF033E,
-      0 0 80px #AA0000, 0 0 160px #FF033E;
+    text-shadow: 0 0 10px #ff033e, 0 0 20px #aa0000, 0 0 40px #ff033e,
+      0 0 80px #aa0000, 0 0 160px #ff033e;
   }
 }
 
@@ -96,8 +95,8 @@ body {
   92.1%,
   100% {
     color: #fff;
-    text-shadow: 0 0 10px #0000FF, 0 0 20px #000080, 0 0 40px #0000FF,
-      0 0 80px #000080, 0 0 160px #0000FF;
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #3c8ce7, 0 0 40px #00eaff,
+      0 0 80px #3c8ce7, 0 0 160px #00eaff;
   }
 }
 
@@ -114,7 +113,19 @@ body {
   animation: fadeOut 15s forwards;
 }
 
-
+/* .linear-wipe {
+  text-align: center;
+  
+  background: linear-gradient(to right, #19fb9b 20%, #199890 40%, #005f59 60%, #19fb9b 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 5s linear infinite;
+} */
 
 .linear-wipe {
   text-align: center;
@@ -130,8 +141,28 @@ body {
   animation: shine 5s linear infinite;
 }
 
+/* .linear-wipe {
+  text-align: center;
+
+  background: linear-gradient(
+    to right,
+    #00eaff 20%,
+    #3c8ce7 40%,
+    #3c8ce7 60%,
+    #00eaff 80%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 5s linear infinite;
+} */
+
 @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
+  to {
+    background-position: 200% center;
   }
+}

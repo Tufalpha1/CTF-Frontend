@@ -32,7 +32,7 @@ const Latest = () => {
 
   return (
     <section className=" relative overflow-x-auto">
-      <h1 className="font-bold text-4xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+      <h1 className="uppercase font-bold text-5xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Latest Captures
       </h1>
       {latestSolves.length > 0 ? (
