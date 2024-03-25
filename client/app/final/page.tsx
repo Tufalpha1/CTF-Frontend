@@ -1,12 +1,17 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/Components/CanvasRevealEffect";
+import { CanvasRevealEffect } from "../../Components/CanvasRevealEffect";
+import { Spotlight } from "../../Components/Spotlight";
 
 const page = () => {
   return (
-    <>
-      <h1 className="text-7xl font-bold text-center mt-32 uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+    <div className="relative antialiased bg-grid-white/[0.02] overflow-hidden">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      <h1 className="text-7xl z-20 font-bold text-center mt-32 uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
         Final Results
       </h1>
       <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
@@ -39,7 +44,7 @@ const page = () => {
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-[#ffdd00]"
-            dotSize={2}
+            colors={[[255, 221, 0]]}
           />
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
@@ -55,7 +60,7 @@ const page = () => {
           />
         </Card>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Leaderboard from "@/Components/Leaderboard";
-import Latest from "@/Components/Latest";
-import keys from "@/lib/variables";
-import audioBlood from "@/public/audio.mp3";
+import Leaderboard from "../Components/Leaderboard";
+import Latest from "../Components/Latest";
+import keys from "../lib/variables";
+import audioBlood from "../public/audio.mp3";
 import useSound from "use-sound";
-import { Solves_and_firstBlood, leaderboard } from "@/lib/data";
+import { Solves_and_firstBlood, leaderboard } from "../lib/data";
 
 const Home = () => {
   // const [showFirstBlood, setShowFirstBlood] = useState(false);

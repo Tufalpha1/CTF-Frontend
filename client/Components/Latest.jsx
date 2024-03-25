@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { latestSolves } from "@/lib/data";
-import  keys  from "@/lib/variables";
+import { latestSolves } from "../lib/data";
+import  keys  from "../lib/variables";
 
 
 const Latest = () => {
