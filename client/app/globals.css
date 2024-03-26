@@ -130,7 +130,7 @@ body {
 .linear-wipe {
   text-align: center;
   
-  background: linear-gradient(to right, #FFDD00 20%, #ce8f2a 40%, #FBB034 60%, #FFDD00 80%);
+  background: linear-gradient(to right, #FFFF00 20%, #ce8f2a 40%, #FBB034 60%, #FFFF00 80%);
   background-size: 200% auto;
   
   color: #000;

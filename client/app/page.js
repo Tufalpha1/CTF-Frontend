@@ -1,11 +1,12 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Component } from "react";
 import Leaderboard from "../Components/Leaderboard";
 import Latest from "../Components/Latest";
 import keys from "../lib/variables";
 import audioBlood from "../public/audio.mp3";
 import useSound from "use-sound";
 import { Solves_and_firstBlood, leaderboard } from "../lib/data";
+import Chart from "../Components/Chart";
 
 const Home = () => {
   // const [showFirstBlood, setShowFirstBlood] = useState(false);
@@ -126,8 +127,8 @@ const Home = () => {
           <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
             <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
             <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
-            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffdd00] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
-            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffdd00] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+            <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
           </div>
         </div>
       );
@@ -135,12 +136,15 @@ const Home = () => {
   };
 
   return (
-    <main className=" font-extrabold flex max-h-screen flex-col items-center gap-14 p-24 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808032_1px,transparent_1px),linear-gradient(to_bottom,#80808032_1px,transparent_1px)] bg-[size:48px_48px]">
+    <main className=" font-extrabold flex h-full flex-col items-center gap-14 px-16 py-24 absolute inset-0 w-full bg-[linear-gradient(to_right,#80808032_1px,transparent_1px),linear-gradient(to_bottom,#80808032_1px,transparent_1px)] bg-[size:48px_48px]">
       {showFirstBloodFunc()}
       <div className="flex">
         {/* <Leaderboard setNewLeader={setNewLeader} setShowNewLeader={setShowNewLeader}  /> */}
         <Leaderboard />
-        <Latest />
+        <div className="flex flex-col overflow-auto">
+          <Latest />
+          <Chart />
+        </div>
       </div>
     </main>
   );

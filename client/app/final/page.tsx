@@ -14,21 +14,21 @@ const page = () => {
       <h1 className="text-7xl z-20 font-bold text-center mt-32 uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
         Final Results
       </h1>
-      <div className="w-full mx-auto sm:w-[72rem] mt-4 relative">
+      <div className="w-full mx-auto sm:w-[72rem] my-4 relative">
         <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
         <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
-        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffdd00] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
-        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffdd00] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
       </div>
 
-      <div className="mx-auto text-center my-8 ">
+      <div className="mx-auto text-center mt-16 ">
         {/* <button className="uppercase inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-700 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 tracking-widest  text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
           Top 3 Winners
         </button> */}
         <button className="px-8 py-2 rounded-full relative bg-black text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
-          <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#ffdd00] to-transparent" />
-          <span className="relative z-20 uppercase">Top 3 Winners</span>
+          <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#ffff00] to-transparent" />
+          <span className="relative z-20 uppercase text-xl">Top 3 Winners</span>
         </button>
       </div>
 
@@ -37,14 +37,16 @@ const page = () => {
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-[#00eaff]"
-            colors={[[125, 211, 252]]}
+            colors={[[60, 140, 231]]}
+            dotSize={3}
           />
         </Card>
         <Card title="Winner - 1st Place" number={0o1}>
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-[#ffdd00]"
-            colors={[[255, 221, 0]]}
+            containerClassName="bg-[#ffff00]"
+            colors={[[206, 143, 42]]}
+            dotSize={3}
           />
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />

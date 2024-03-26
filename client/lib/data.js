@@ -17,6 +17,10 @@ const leaderboard = {
     { position: 4, name: "Zerox", points: 1090 },
     { position: 5, name: "Sensei", points: 950 },
     { position: 6, name: "ENOFLAG", points: 900 },
+    { position: 7, name: "0x04", points: 800 },
+    { position: 8, name: "ashfaq", points: 750 },
+    { position: 9, name: "derekHale", points: 700 },
+    { position: 10, name: "TeamX", points: 600 },
   ],
   leader: {
     name: "Dicegang",
