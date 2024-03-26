@@ -31,7 +31,7 @@ const Chart = () => {
         <YAxis stroke='#fff'/>
         <Tooltip wrapperStyle={{ color: '#000', border: '1px solid #777', borderRadius: 2, lineHeight: '40px'}}/>
         <Legend />
-        <Bar dataKey="points" fill="#FFDD00" barSize={45} activeBar={<Rectangle fill="#ffdd00" stroke="#ffdd00" className='text-black'/>}  />
+        <Bar dataKey="points" fill="#FFFF00" barSize={45} activeBar={<Rectangle fill="#ffdd00" stroke="#ffdd00" className='text-black'/>}  />
       </BarChart>
     </ResponsiveContainer>
   )
