@@ -6,61 +6,54 @@ import { Spotlight } from "../../Components/Spotlight";
 
 const page = () => {
   return (
-    <div className="relative antialiased bg-grid-white/[0.02] overflow-hidden">
+    <div className="relative antialiased overflow-hidden ">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      <h1 className="text-7xl z-20 font-bold text-center mt-32 uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-        Final Results
-      </h1>
-      <div className="w-full mx-auto sm:w-[72rem] my-4 relative">
-        <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
-        <div className="absolute inset-x-32 bg-gradient-to-r from-transparent via-[#ce8f2a] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
-        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
-        <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ffff00] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
-      </div>
-
-      <div className="mx-auto text-center mt-16 ">
-        {/* <button className="uppercase inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-700 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 tracking-widest  text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
-          Top 3 Winners
-        </button> */}
-        <button className="px-8 py-2 rounded-full relative bg-black text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
-          <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#ffff00] to-transparent" />
-          <span className="relative z-20 uppercase text-xl">Top 3 Winners</span>
-        </button>
-      </div>
-
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
-        <Card title="Runner up - 2nd Place" number={0o2}>
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-[#00eaff]"
-            colors={[[60, 140, 231]]}
-            dotSize={3}
-          />
-        </Card>
-        <Card title="Winner - 1st Place" number={0o1}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-[#ffff00]"
-            colors={[[206, 143, 42]]}
-            dotSize={3}
-          />
-          {/* Radial gradient for the cute fade */}
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
-        </Card>
-        <Card title="2nd runner up - 3rd Place" number={0o3}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-[#AA0000]"
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
-            ]}
-          />
-        </Card>
+      <div className="px-4 mx-auto text-center lg:px-12">
+        <h1 className="uppercase font-heading linear-wipe mt-32 pb-4 mx-auto max-w-5xl lg:max-w-full text-4xl sm:text-6xl lg:text-8xl">
+          AirOverflow CTF 2024
+        </h1>
+        <div className="mt-16">
+          <p className="uppercase text-center text-[1.5rem] sm:text-4xl max-w-4xl mx-auto ">Final Results</p>
+          <div className="w-full mx-auto sm:w-[50rem] -mt-1 relative">
+            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
+            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+          </div>
+        </div>
+        <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black/50 w-full gap-4 mx-auto px-8">
+          <Card title="Runner up - 2nd Place" number={0o2}>
+            <CanvasRevealEffect
+              animationSpeed={5.1}
+              containerClassName="bg-[#47f7fe]"
+              colors={[[64, 224, 208]]}
+              dotSize={3}
+            />
+          </Card>
+          <Card title="Winner - 1st Place" number={0o1}>
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-[#7928b8]"
+              colors={[[255, 0, 190]]}
+              dotSize={3}
+            />
+            {/* Radial gradient for the cute fade */}
+            <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+          </Card>
+          <Card title="2nd runner up - 3rd Place" number={0o3}>
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-[#AA0000]"
+              colors={[
+                [236, 72, 153],
+                [232, 121, 249],
+              ]}
+            />
+          </Card>
+        </div>
       </div>
     </div>
   );
