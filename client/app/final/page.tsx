@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "../../components/CanvasRevealEffect";
-import { Spotlight } from "../../components/Spotlight";
+import { CanvasRevealEffect } from "../../Components/CanvasRevealEffect";
+import { Spotlight } from "../../Components/Spotlight";
 
 const page = () => {
   return (

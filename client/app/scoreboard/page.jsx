@@ -1,8 +1,8 @@
 'use client';
 import React from 'react'
-import Leaderboard from '../../components/Leaderboard'
-import Latest from '../../components/Latest'
-import Countdown from '../../components/Countdown'
+import Leaderboard from '../../Components/Leaderboard'
+import Latest from '../../Components/Latest'
+import Countdown from '../../Components/Countdown'
 import { Solves_and_firstBlood, leaderboard } from "../../lib/data";
 
 

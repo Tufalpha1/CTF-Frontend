@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { EvervaultCard, Icon } from "../components/EvervaultCard";
+import { EvervaultCard, Icon } from "../Components/EvervaultCard";
 import keys from "../lib/variables";
 import audioBlood from "../public/audio.mp3";
 import useSound from "use-sound";
