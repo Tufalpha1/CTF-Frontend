@@ -1,13 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/api/data/:path*",
-        destination: `${process.env.BACKEND_URL}/api/data/:path*`,
-      },
-    ];
-  },
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({
