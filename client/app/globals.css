@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "Mars";
-  src: url("/fonts/Mars.ttf?v=1.0") format("truetype");
+  src: url("../public/fonts/Mars.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Yapari";
-  src: url("/fonts/Yapari.ttf") format("truetype");
+  src: url("../public/fonts/Yapari.ttf") format("truetype");
 }
 
 :root {
