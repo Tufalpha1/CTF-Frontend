@@ -6,7 +6,7 @@ import { Spotlight } from "../../components/Spotlight";
 
 const page = () => {
   return (
-    <div className="relative antialiased overflow-hidden ">
+    <div className="relative antialiased overflow-hidden">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
