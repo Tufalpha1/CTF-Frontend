@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef, Component } from "react";
 import Link from "next/link";
-import { EvervaultCard, Icon } from "../Components/EvervaultCard";
-import Leaderboard from "../Components/Leaderboard";
-import Latest from "../Components/Latest";
+import { EvervaultCard, Icon } from "../components/EvervaultCard";
+import Leaderboard from "../components/Leaderboard";
+import Latest from "../components/Latest";
 import keys from "../lib/variables";
 import audioBlood from "../public/audio.mp3";
 import useSound from "use-sound";
@@ -197,7 +197,7 @@ const Home = () => {
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image={bugbountypro} background="bg-gradient-to-r from-[#e3613e] to-[#014d6f]" />
+          <EvervaultCard image={bugbountypro.src} background="bg-gradient-to-r from-[#e3613e] to-[#014d6f]" />
           <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
             Burp Bounty Pro
           </p>
@@ -208,7 +208,7 @@ const Home = () => {
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image={digitalocean} className="w-40" background="bg-gradient-to-r from-[#0180ff] to-[#0059b2]" />
+          <EvervaultCard image={digitalocean.src} className="w-40" background="bg-gradient-to-r from-[#0180ff] to-[#0059b2]" />
           <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
             Digital Ocean
           </p>
@@ -219,7 +219,7 @@ const Home = () => {
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image={letsdefend} background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
+          <EvervaultCard image={letsdefend.src} background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
           <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
             Let's Defend
           </p>

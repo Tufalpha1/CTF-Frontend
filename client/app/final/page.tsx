@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "../../Components/CanvasRevealEffect";
-import { Spotlight } from "../../Components/Spotlight";
+import { CanvasRevealEffect } from "../../components/CanvasRevealEffect";
+import { Spotlight } from "../../components/Spotlight";
 
 const page = () => {
   return (
@@ -61,6 +61,22 @@ const page = () => {
 
 export default page;
 
+const Icon = ({ className, ...rest }: any) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className={className}
+      {...rest}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+    </svg>
+  );
+};
+
 const Card = ({
   title,
   number,
@@ -106,18 +122,4 @@ const Card = ({
   );
 };
 
-const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};
+

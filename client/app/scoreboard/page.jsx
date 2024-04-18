@@ -1,8 +1,8 @@
 'use client';
 import React from 'react'
-import Leaderboard from '../../Components/Leaderboard'
-import Latest from '../../Components/Latest'
-import Countdown from '../../Components/Countdown'
+import Leaderboard from '../../components/Leaderboard'
+import Latest from '../../components/Latest'
+import Countdown from '../../components/Countdown'
 
 
 const endTime = new Date(Date.UTC(2024, 3, 28, 20, 0, 0));
