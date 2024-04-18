@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/leaderboard/page.jsx", "app/page.js", "app/final/page.tsx", "Components/EvervaultCard.jsx"  ],
+, "app/leaderboard/page.jsx", "app/page.js", "app/final/page.tsx", "components/EvervaultCard.tsx"  ],
   "exclude": [
     "node_modules"
   ],

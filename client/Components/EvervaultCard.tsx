@@ -9,6 +9,10 @@ export const EvervaultCard = ({
   image,
   className,
   background,
+}: {
+  image?: string;
+  className?: string;
+  background?: string;
 }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -20,7 +24,7 @@ export const EvervaultCard = ({
     setRandomString(str);
   }, []);
 
-  function onMouseMove({ currentTarget, clientX, clientY }) {
+  function onMouseMove({ currentTarget, clientX, clientY }: any) {
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -56,7 +60,7 @@ export const EvervaultCard = ({
   );
 };
 
-export function CardPattern({ mouseX, mouseY, randomString, background }) {
+export function CardPattern({ mouseX, mouseY, randomString, background }: any) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
@@ -81,7 +85,7 @@ export function CardPattern({ mouseX, mouseY, randomString, background }) {
 
 const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-export const generateRandomString = (length) => {
+export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -89,7 +93,7 @@ export const generateRandomString = (length) => {
   return result;
 };
 
-export const Icon = ({ className, ...rest }) => {
+export const Icon = ({ className, ...rest }: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
