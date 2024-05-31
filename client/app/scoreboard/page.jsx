@@ -6,7 +6,8 @@ import Countdown from '../../Components/Countdown'
 import { Solves_and_firstBlood, leaderboard } from "../../lib/data";
 
 
-const endTime = new Date(Date.UTC(2024, 3, 28, 20, 0, 0));
+// const endTime = new Date(Date.UTC(2024, 3, 28, 20, 0, 0));
+const endTime = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
 
 
 const page = () => {

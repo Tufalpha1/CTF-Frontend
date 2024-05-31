@@ -9,6 +9,7 @@ import { Bug, SquareTerminal, Binary, FileDigit, Fingerprint, GlobeLock } from "
 import bugbountypro from "../public/assets/sponsors/burp-bounty-pro.png";
 import digitalocean from "../public/assets/sponsors/digital-ocean.png";
 import letsdefend from "../public/assets/sponsors/lets-defend.png";
+import offsec from "../public/assets/sponsors/offsec.png";
 
 const Home = () => {
 
@@ -46,7 +47,7 @@ const Home = () => {
         <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
       </div>
 
-      <div className="flex mt-12 place-content-evenly mx-auto gap-8 max-w-3xl">
+      <div className="flex flex-col sm:flex-row mt-12 place-content-center items-center space-y-2 sm:space-y-0 sm:space-x-2 mx-auto max-w-3xl">
         <Link href="/scoreboard">
           <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#ff00be] to-transparent" />
@@ -68,12 +69,33 @@ const Home = () => {
             </svg>
           </button>
         </Link>
+        <Link href="/final">
+          <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+            <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#ff00be] to-transparent" />
+            <span className="relative z-20 uppercase text-sm tracking-widest">Final results</span>
+            <svg
+              fill="none"
+              height="18"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.75 8.75L14.25 12L10.75 15.25"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </button>
+        </Link>
       </div>
       <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Sponsors
       </h1>
-      <div className="xl:flex">
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6">
+        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem]  h-[30rem]">
           <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
@@ -84,7 +106,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
           <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
@@ -95,7 +117,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
           <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
           <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
@@ -103,6 +125,17 @@ const Home = () => {
           <EvervaultCard image={letsdefend} background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
           <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
             Let's Defend
+          </p>
+        </div>
+
+        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+          <EvervaultCard image={offsec} background="bg-gradient-to-r from-[#10a5cb] to-[#4946cc]" />
+          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+            Offsec
           </p>
         </div>
       </div>
