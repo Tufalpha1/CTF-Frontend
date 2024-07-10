@@ -41,7 +41,7 @@ const Home = () => {
         Ignite Hackathon 2024
       </h1>
       <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
-        Hack harder
+        Trainings 2024
       </p>
 
       <div className="w-full mx-auto sm:w-[30rem] -mt-[0.26rem] relative">
@@ -94,7 +94,7 @@ const Home = () => {
             </svg>
           </button>
         </Link>
-        <Link href="/">
+        <Link href="https://discord.gg/KheekMYC">
           <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
             <span className="relative z-20 uppercase text-sm tracking-widest">Discord</span>
@@ -289,171 +289,199 @@ const Home = () => {
           </MenuItems>
         </Menu>
 
-        
+
       </div>
-      <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+      <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12 mt-64">
         Cities
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem]  h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/faisal-mosque.png" background="bg-gradient-to-r from-emerald-500 to-green-600" />
-          <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Islamabad
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem]  h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/faisal-mosque.png" background="bg-gradient-to-r from-emerald-500 to-green-600" />
+            <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Islamabad
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/lahore-monument.png" className="w-40" background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
-          <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Lahore
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/lahore-monument.png" className="w-40" background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
+            <p className="text-lg mx-auto text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Lahore
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/quaid.png" background="bg-gradient-to-r from-[#0180ff] to-[#0059b2]" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Karachi
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/quaid.png" background="bg-gradient-to-r from-[#0180ff] to-[#0059b2]" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Karachi
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/khyber-pass.png" background="bg-gradient-to-r from-red-500 to-yellow-500" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Peshawar
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/khyber-pass.png" background="bg-gradient-to-r from-red-500 to-yellow-500" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Peshawar
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/ziarat-residency.png" background="bg-gradient-to-r from-purple-500 to-[#4946cc]" className="h-64 w-96" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Quetta
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/ziarat-residency.png" background="bg-gradient-to-r from-purple-500 to-[#4946cc]" className="h-64 w-96" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Quetta
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/stadium.png" background="bg-gradient-to-r from-[#10a5cb] to-[#4946cc]" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Rawalpindi
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/stadium.png" background="bg-gradient-to-r from-[#10a5cb] to-[#4946cc]" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Rawalpindi
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/gujranwala.png" background="bg-gradient-to-r from-[#10a5cb] to-[#4946cc]" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Gujranwala
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/gujranwala.png" background="bg-gradient-to-r from-[#10a5cb] to-[#4946cc]" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Gujranwala
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/sialkot.png" background="bg-gradient-to-r from-amber-600 to-yellow-950" className="h-64" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Sialkot
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/sialkot.png" background="bg-gradient-to-r from-amber-600 to-yellow-950" className="h-64" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Sialkot
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/faisalabad.png" background="bg-gradient-to-r from-amber-700 to-yellow-950" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Faisalabad
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/faisalabad.png" background="bg-gradient-to-r from-amber-700 to-yellow-950" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Faisalabad
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/rahim-yar-khan.png" background="bg-gradient-to-r from-amber-600 to-cyan-800" className="w-40 h-40" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Rahim Yar Khan
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/rahim-yar-khan.png" background="bg-gradient-to-r from-amber-600 to-cyan-800" className="w-40 h-40" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Rahim Yar Khan
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/multan.png" background="bg-gradient-to-r from-[#10a5cb] to-orange-200" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Multan
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/multan.png" background="bg-gradient-to-r from-[#10a5cb] to-orange-200" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Multan
+            </p>
+          </div>
+        </Link>
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/bahawalpur.png" background="bg-gradient-to-r from-yellow-300 to-slate-700" className="w-40 h-40" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Bahawalpur
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/bahawalpur.png" background="bg-gradient-to-r from-yellow-300 to-slate-700" className="w-40 h-40" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Bahawalpur
+            </p>
+          </div>
+        </Link>
       </div>
 
       <div className="mx-auto grid grid-cols-1 md:grid-cols-3 mt-8">
-      <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/sukkur.png" background="bg-gradient-to-r from-yellow-800 to-blue-700" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Sukkur
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/sukkur.png" background="bg-gradient-to-r from-yellow-800 to-blue-700" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Sukkur
+            </p>
+          </div>
+        </Link> 
 
         <Image src="/hackathon-logo.png" width={200} height={200} className="w-20 h-20 md:w-60 md:h-60 mx-auto mt-32" />
 
-        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
-          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-          <EvervaultCard image="/cities/hyderabad.png" background="bg-gradient-to-r from-orange-600 to-orange-950" />
-          <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
-            Hyderabad
-          </p>
-        </div>
+        <Link href="/city">
+          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <EvervaultCard image="/cities/hyderabad.png" background="bg-gradient-to-r from-orange-600 to-orange-950" />
+            <p className="text-lg mx-auto  text-center font-light mt-4 text-black dark:text-slate-200 px-2 py-0.5">
+              Hyderabad
+            </p>
+          </div>
+        </Link>
       </div>
-      <div className="py-20 ">
+      <div className="my-64">
         <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
           Categories
         </h1>
@@ -470,7 +498,7 @@ const Home = () => {
         </div>
       </div>
 
-      <h1 className="uppercase text-xl sm:text-3xl mt-24 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
+      <h1 className=" mt-64 uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Technical Team
       </h1>
       <ol className="text-center grid grid-cols-2 sm:grid-cols-4 2xl:grid-cols-8 place-content-center  mx-auto text-xs max-w-5xl">

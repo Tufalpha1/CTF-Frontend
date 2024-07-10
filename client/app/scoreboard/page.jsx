@@ -115,7 +115,7 @@ const page = () => {
                         Ignite Hackathon 2024
                     </h1>
                     <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
-                        Hack harder
+                        Trainings 2024
                     </p>
                     <div className="w-full mx-auto sm:w-[30rem] -mt-[0.26rem] relative">
                         <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
