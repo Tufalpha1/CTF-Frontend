@@ -7,7 +7,7 @@ import { Solves_and_firstBlood, leaderboard } from "../../lib/data";
 
 
 // const endTime = new Date(Date.UTC(2024, 3, 28, 20, 0, 0));
-const endTime = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+const endTime = new Date(Date.UTC(2024, 7, 5, 0, 50, 30));
 
 
 const page = () => {
@@ -112,16 +112,16 @@ const page = () => {
             return (
                 <div>
                     <h1 className="uppercase font-heading linear-wipe text-center pr-2 pb-4 mx-auto pt-20 max-w-lg lg:max-w-7xl text-3xl sm:text-6xl lg:text-8xl sm:w-auto">
-                        Airoverflow CTF 2024
+                        Ignite Hackathon 2024
                     </h1>
                     <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
                         Hack harder
                     </p>
                     <div className="w-full mx-auto sm:w-[30rem] -mt-[0.26rem] relative">
-                        <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
-                        <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
-                        <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
-                        <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+                        <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
+                        <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
+                        <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+                        <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
                     </div>
                 </div>
             )

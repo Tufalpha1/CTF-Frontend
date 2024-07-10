@@ -13,15 +13,15 @@ const page = () => {
       />
       <div className="px-4 mx-auto text-center lg:px-12">
         <h1 className="uppercase font-heading linear-wipe mt-32 pb-4 mx-auto max-w-5xl lg:max-w-full text-4xl sm:text-6xl lg:text-8xl">
-          AirOverflow CTF 2024
+          Ignite Hackathon 2024
         </h1>
         <div className="mt-16">
           <p className="uppercase text-center text-[1.5rem] sm:text-4xl max-w-4xl mx-auto ">Final Results</p>
           <div className="w-full mx-auto sm:w-[50rem] -mt-1 relative">
-            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
-            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#cc0097] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
-            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
-            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
+            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 sm:inset-x-28 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[1px] sm:h-[2px] w-1/2 sm:w-3/4" />
+            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
+            <div className="absolute inset-x-28 sm:inset-x-[20rem] bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
           </div>
         </div>
         <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black/50 w-full gap-4 mx-auto px-8">
@@ -36,8 +36,8 @@ const page = () => {
           <Card title="Winner - 1st Place" number={0o1}>
             <CanvasRevealEffect
               animationSpeed={3}
-              containerClassName="bg-[#7928b8]"
-              colors={[[255, 0, 190]]}
+              containerClassName="bg-[#FFBE0B]"
+              colors={[[244, 43, 3]]}
               dotSize={3}
             />
             {/* Radial gradient for the cute fade */}

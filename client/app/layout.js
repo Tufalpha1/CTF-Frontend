@@ -2,7 +2,7 @@ import './globals.css'
 
 
 export const metadata = {
-  title: 'CTF 2024',
+  title: 'Ignite Hackathon 2024',
   description: 'Hack harder',
 }
 
