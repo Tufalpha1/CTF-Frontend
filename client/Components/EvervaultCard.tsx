@@ -61,12 +61,12 @@ export const EvervaultCard = ({
 };
 
 export function CardPattern({ mouseX, mouseY, randomString, background }: any) {
-  let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, black, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
   return (
     <div className="pointer-events-none">
-      <div className="absolute inset-0 rounded-2xl  [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
+      <div className="absolute inset-0 rounded-2xl  [mask-image:linear-gradient(black,transparent)] group-hover/card:opacity-50"></div>
       <motion.div
         className={cn("absolute inset-0 rounded-2xl  opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500", background)}
         style={style}
