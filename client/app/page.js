@@ -94,7 +94,7 @@ const Home = () => {
             </svg>
           </button>
         </Link>
-        <Link href="https://discord.gg/KheekMYC">
+        <Link href="https://discord.gg/aA27yvBq">
           <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
             <span className="relative z-20 uppercase text-sm tracking-widest">Discord</span>
