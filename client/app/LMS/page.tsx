@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const page = () => {
   return (
-    <div className="relative w-full h-screen pt-32 sm:pt-56  bg-black z-10">
+    <div className="relative w-full h-screen pt-56  bg-black z-10">
       <div className="absolute z-[-2] bottom-0  left-0 right-0 top-0 bg-[linear-gradient(to_right,#8f8d8d2c_1px,transparent_1px),linear-gradient(to_bottom,#8f8d8d2c_1px,transparent_1px)] bg-[size:14px_24px]" />
       <div className="w-64 h-40 mx-auto -mt-40 mb-20">
         <Image

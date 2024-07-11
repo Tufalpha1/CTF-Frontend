@@ -452,7 +452,7 @@ const Home = () => {
         </Link>
       </div>
 
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 mt-8">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8">
         <Link href="/city">
           <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
@@ -466,7 +466,7 @@ const Home = () => {
           </div>
         </Link> 
 
-        <Image src="/hackathon-logo.png" width={200} height={200} className="w-20 h-20 md:w-60 md:h-60 mx-auto mt-32" />
+        <Image src="/hackathon-logo.png" width={200} height={200} className="hidden xl:block xl:w-60 xl:h-60 mx-auto mt-32" />
 
         <Link href="/city">
           <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
