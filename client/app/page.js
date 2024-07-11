@@ -38,7 +38,7 @@ const Home = () => {
       </div> */}
       <Image src="/hackathon-logo.png" width={160} height={200} className="w-20 h-20 sm:w-40 sm:h-40 mx-auto my-6" />
       <h1 className="uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl">
-        Ignite Hackathon 2024
+        Ignite Hackathon Hands on Workshops 2024
       </h1>
       <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
         Trainings 2024
@@ -51,7 +51,7 @@ const Home = () => {
         <div className="absolute inset-x-28 sm:inset-x-44 bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 mt-12 place-content-center items-center space-y-2 sm:space-y-0 sm:space-x-2 mx-auto max-w-2xl">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 mt-12 place-content-center items-center space-y-2 sm:space-y-0 sm:space-x-2 mx-auto max-w-2xl">
         <Link href="/scoreboard">
           <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
@@ -73,10 +73,10 @@ const Home = () => {
             </svg>
           </button>
         </Link>
-        <Link href="/LMS">
+        <Link href="http://35.225.52.233">
           <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
-            <span className="relative z-20 uppercase text-sm tracking-widest">LMS</span>
+            <span className="relative z-20 uppercase text-sm tracking-widest">CTF</span>
             <svg
               fill="none"
               height="18"
@@ -115,10 +115,10 @@ const Home = () => {
             </svg>
           </button>
         </Link>
-        <Link href="/solutions">
-          <button className="mx-auto flex items-center gap-2 px-8 py-2 mt-4 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+        <Link href="/practice-platform">
+          <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
-            <span className="relative z-20 uppercase text-sm tracking-widest">Solutions</span>
+            <span className="relative z-20 uppercase text-sm tracking-widest">Practice Platform</span>
             <svg
               fill="none"
               height="18"
@@ -136,10 +136,10 @@ const Home = () => {
             </svg>
           </button>
         </Link>
-        <Link href="/practice-platform">
-          <button className="mx-auto flex items-center gap-2 px-8 py-2 mt-4 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+        <Link href="/LMS">
+          <button className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
             <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-[#FFBE0B] to-transparent" />
-            <span className="relative z-20 uppercase text-sm tracking-widest">Practice Platform</span>
+            <span className="relative z-20 uppercase text-sm tracking-widest">LMS</span>
             <svg
               fill="none"
               height="18"

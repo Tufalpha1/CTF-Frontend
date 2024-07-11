@@ -112,7 +112,7 @@ const page = () => {
             return (
                 <div>
                     <h1 className="uppercase font-heading linear-wipe text-center pr-2 pb-4 mx-auto pt-20 max-w-lg lg:max-w-7xl text-3xl sm:text-6xl lg:text-8xl sm:w-auto">
-                        Ignite Hackathon 2024
+                    Ignite Hackathon Hands on Workshops 2024
                     </h1>
                     <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
                         Trainings 2024
