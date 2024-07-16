@@ -111,11 +111,14 @@ const page = () => {
         } else {
             return (
                 <div>
-                    <h1 className="uppercase font-heading linear-wipe text-center pr-2 pb-4 mx-auto pt-20 max-w-lg lg:max-w-7xl text-3xl sm:text-6xl lg:text-8xl sm:w-auto">
-                    Ignite Hackathon Hands on Workshops 2024
+                    <h1 className="uppercase font-heading linear-wipe text-center pr-2 mx-auto pt-20 max-w-lg lg:max-w-full text-5xl sm:text-6xl lg:text-8xl sm:w-auto">
+                        Ignite Cyber Hackathon
+                    </h1>
+                    <h1 className="mb-8 uppercase font-heading linear-wipe text-center pr-2 pb-4 mx-auto max-w-lg lg:max-w-7xl text-5xl sm:text-6xl lg:text-8xl sm:w-auto">
+                        2 0 2 4
                     </h1>
                     <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
-                        Trainings 2024
+                        QUALIFIER ROUND 2024
                     </p>
                     <div className="w-full mx-auto sm:w-[30rem] -mt-[0.26rem] relative">
                         <div className="absolute inset-x-20 sm:inset-x-20 bg-gradient-to-r from-transparent via-[#F42B03] to-transparent h-[2px] sm:h-[3px] w-1/2 sm:w-3/4 blur-sm" />
@@ -142,4 +145,4 @@ const page = () => {
     );
 }
 
-    export default page
+export default page

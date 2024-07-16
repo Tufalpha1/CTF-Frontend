@@ -12,9 +12,10 @@ const page = () => {
         fill="white"
       />
       <div className="px-4 mx-auto text-center lg:px-12">
-        <h1 className="uppercase font-heading linear-wipe mt-32 pb-4 mx-auto max-w-5xl lg:max-w-full text-4xl sm:text-6xl lg:text-8xl">
-          Ignite Hackathon 2024
+        <h1 className="uppercase font-heading linear-wipe mt-32 pb-4 mx-auto max-w-5xl lg:max-w-full text-5xl sm:text-6xl lg:text-8xl">
+          Ignite Cyber Hackathon
         </h1>
+        <h1 className="uppercase font-heading linear-wipe -mt-4 mx-auto max-w-5xl lg:max-w-full text-5xl sm:text-6xl lg:text-8xl">2 0 2 4</h1>
         <div className="mt-16">
           <p className="uppercase text-center text-[1.5rem] sm:text-4xl max-w-4xl mx-auto ">Final Results</p>
           <div className="w-full mx-auto sm:w-[50rem] -mt-1 relative">

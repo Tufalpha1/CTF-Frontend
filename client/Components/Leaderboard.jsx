@@ -62,7 +62,7 @@ const Leaderboard = ({ setNewLeader, setShowNewLeader }) => {
             <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[5px] sm:h-[7px] w-1/4 sm:w-[25%] blur-sm" />
             <div className="absolute inset-x-96 bg-gradient-to-r from-transparent via-[#ff00be] to-transparent h-[1px] sm:h-[2px] w-1/4 sm:w-[25%]" />
           </div> */}
-      <div className="-ml-3 flex flex-col md:flex-row xl:flex-row items-center justify-center gap-5">
+      <div className="-ml-3 flex flex-col md:flex-row items-center justify-center gap-5">
         {/* {top3Teams.map((team, index) => (
           <div
             key={index}

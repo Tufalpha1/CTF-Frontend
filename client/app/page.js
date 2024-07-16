@@ -37,10 +37,10 @@ const Home = () => {
         </svg>
       </div> */}
       <Image src="/hackathon-logo.png" width={160} height={200} className="w-20 h-20 sm:w-40 sm:h-40 mx-auto my-6" />
-      <h1 className="uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl max-w-max">
+      <h1 className="uppercase font-heading linear-wipe text-center mx-auto pb-4 text-5xl sm:text-6xl lg:text-8xl max-w-max">
         Ignite Cyber Hackathon 
       </h1>
-      <h1 className="-mt-4 mb-8 uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl max-w-max">2 0 2 4</h1>
+      <h1 className="-mt-4 mb-8 uppercase font-heading linear-wipe text-center mx-auto pb-4 text-5xl sm:text-6xl lg:text-8xl max-w-max">2 0 2 4</h1>
       <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
         QUALIFIER ROUND 2024
       </p>
