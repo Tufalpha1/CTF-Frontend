@@ -37,11 +37,12 @@ const Home = () => {
         </svg>
       </div> */}
       <Image src="/hackathon-logo.png" width={160} height={200} className="w-20 h-20 sm:w-40 sm:h-40 mx-auto my-6" />
-      <h1 className="uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl">
-        Ignite Hackathon Hands on Workshops 2024
+      <h1 className="uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl max-w-max">
+        Ignite Cyber Hackathon 
       </h1>
+      <h1 className="-mt-4 mb-8 uppercase font-heading linear-wipe text-center mx-auto pb-4 text-3xl sm:text-6xl lg:text-8xl max-w-max">2 0 2 4</h1>
       <p className="uppercase text-center tracking-widest text-xl 2xl:text-2xl max-w-3xl mx-auto text-slate-300">
-        Trainings 2024
+        QUALIFIER ROUND 2024
       </p>
 
       <div className="w-full mx-auto sm:w-[30rem] -mt-[0.26rem] relative">
@@ -159,7 +160,7 @@ const Home = () => {
         </Link>
         <Menu as="div" className="relative inline-block text-left ">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-full  px-3 py-2 text-sm font-semibold text-slate-100 hover:shadow-2xl hover:shadow-white/[0.5] transition duration-200 border border-slate-400">
+            <MenuButton className="mx-auto flex items-center gap-2 px-8 py-2 rounded-full relative bg-black text-slate-100 text-sm hover:shadow-2xl hover:shadow-white/[0.5] transition duration-200 border border-slate-400">
               CITIES
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -292,62 +293,60 @@ const Home = () => {
 
       </div>
       <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12 mt-64">
-        Cities
+        Rounds
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <Link href="/city">
+
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem]  h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white " />
-            <EvervaultCard image="/cities/faisal-mosque.png" background="bg-gradient-to-r from-emerald-500 to-green-600" />
-            <p className="text-lg mx-auto text-center font-light mt-4 text-slate-200 px-2 py-0.5">
-              Islamabad
+            <EvervaultCard image="/shield.png" background="bg-gradient-to-r from-[#20A4F3] to-[#2234AE]" />
+            <p className="uppercase text-lg mx-auto text-center font-light mt-4 text-slate-200 px-2 py-0.5">
+              Blue Teaming
             </p>
           </div>
-        </Link>
 
-        <Link href="/city">
+
+ 
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white " />
-            <EvervaultCard image="/cities/lahore-monument.png" className="w-40" background="bg-gradient-to-r from-[#069be0] to-[#04bdae]" />
-            <p className="text-lg mx-auto text-center font-light mt-4 text-slate-200 px-2 py-0.5">
-              Lahore
+            <EvervaultCard image="/red-teaming.png"  background="bg-gradient-to-r from-[#FF0000] to-[#990000]" />
+            <p className="uppercase text-lg mx-auto text-center font-light mt-4 text-slate-200 px-2 py-0.5">
+              Red Teaming
             </p>
           </div>
-        </Link>
 
-        <Link href="/city">
+
+
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white " />
-            <EvervaultCard image="/cities/quaid.png" background="bg-gradient-to-r from-[#0180ff] to-[#0059b2]" />
-            <p className="text-lg mx-auto  text-center font-light mt-4 text-slate-200 px-2 py-0.5">
-              Karachi
+            <EvervaultCard image="/bug-bounty.png" background="bg-gradient-to-r from-[#663dff] to-[#cc4499]" />
+            <p className="uppercase text-lg mx-auto  text-center font-light mt-4 text-slate-200 px-2 py-0.5">
+              Bug Bounty
             </p>
           </div>
-        </Link>
 
-        <Link href="/city">
+
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white " />
-            <EvervaultCard image="/cities/khyber-pass.png" background="bg-gradient-to-r from-red-500 to-yellow-500" />
-            <p className="text-lg mx-auto  text-center font-light mt-4 text-slate-200 px-2 py-0.5">
-              Peshawar
+            <EvervaultCard image="/pwn2own.png" background="bg-gradient-to-r from-[#04BF00] to-[#015D00]" />
+            <p className="uppercase text-lg mx-auto  text-center font-light mt-4 text-slate-200 px-2 py-0.5">
+              PWN 2 OWN
             </p>
           </div>
-        </Link>
 
-        <Link href="/city">
+        {/* <Link href="/city">
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
@@ -449,10 +448,10 @@ const Home = () => {
               Bahawalpur
             </p>
           </div>
-        </Link>
+        </Link> */}
       </div>
 
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8">
+      {/* <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8">
         <Link href="/city">
           <div className="border border-white/[0.4] flex flex-col items-start max-w-sm mx-auto p-4 relative w-[20rem] h-[30rem]">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
@@ -480,7 +479,7 @@ const Home = () => {
             </p>
           </div>
         </Link>
-      </div>
+      </div> */}
       <div className="my-64">
         <h1 className="uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
           Categories
@@ -501,7 +500,7 @@ const Home = () => {
       <h1 className=" mt-64 uppercase text-xl sm:text-3xl tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center my-12">
         Technical Team
       </h1>
-      <ol className="text-center grid grid-cols-2 sm:grid-cols-4 2xl:grid-cols-8 place-content-center  mx-auto text-xs max-w-5xl">
+      <ol className="text-center grid grid-cols-2 sm:grid-cols-4 place-content-center  mx-auto text-xs max-w-5xl">
         <li className="my-1">
           Tufalpha1
         </li>
